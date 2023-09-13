@@ -8,7 +8,7 @@ let particleArray = [];
 const mouse = {
     x: null,
     y: null,
-    radius: 250
+    radius: 100
 }
 
 window.addEventListener('mousemove', function(event) { 
@@ -17,8 +17,8 @@ window.addEventListener('mousemove', function(event) {
 });
 
 ctx.fillStyle = 'white';
-ctx.font = '30px Verdana';
-ctx.fillText('TOGA', 0, 30);
+ctx.font = '25px Verdana';
+ctx.fillText('HELLO', 0, 30);
 const textCoordinates = ctx.getImageData(0, 0, 100, 100);
 
 class Particle {
@@ -31,7 +31,7 @@ class Particle {
         this.density = (Math.random() * 40) + 5;
     }
     draw(){
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = 'white';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
